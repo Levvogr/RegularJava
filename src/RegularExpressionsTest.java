@@ -33,4 +33,19 @@ public class RegularExpressionsTest {
         Assert.assertEquals(true, RegularExpressions.isGUID("e02fd0e4-00fd-AAAA-ca30-0d00a0038ba0"));
         Assert.assertEquals(true, RegularExpressions.isGUID("e02fd0e4-00fd-090A-aaaa-0d00a0038ba0"));
     }
+    @Test
+    public void testIsURL() {
+        Assert.assertEquals(false, RegularExpressions.isURl("Just Text"));
+        Assert.assertEquals(false, RegularExpressions.isURl("http://a.com."));
+        Assert.assertEquals(false, RegularExpressions.isURl("http://www.example.com:65536/pa/th#sfa"));
+        Assert.assertEquals(false, RegularExpressions.isURl("http://www.example.com:-1"));
+        Assert.assertEquals(false, RegularExpressions.isURl("http://www.-Examaple.com"));
+        Assert.assertEquals(false, RegularExpressions.isURl("http://ww]w.Example.com"));
+        Assert.assertEquals(true, RegularExpressions.isURl("http://www.example.com:0"));
+        Assert.assertEquals(true, RegularExpressions.isURl("http://www.example.com:65535"));
+        Assert.assertEquals(true, RegularExpressions.isURl("http://www.exam-ple.com:8080/pa/th?q1=val1&q2=val2#sfafass"));
+        Assert.assertEquals(true, RegularExpressions.isURl("http://www.example.com:8080#sfafass"));
+        Assert.assertEquals(true, RegularExpressions.isURl("http://www.example.com:8080/pa/th"));
+        Assert.assertEquals(true, RegularExpressions.isURl("example.com"));
+    }
 }
