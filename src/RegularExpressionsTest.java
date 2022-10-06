@@ -48,4 +48,19 @@ public class RegularExpressionsTest {
         Assert.assertEquals(true, RegularExpressions.isURl("http://www.example.com:8080/pa/th"));
         Assert.assertEquals(true, RegularExpressions.isURl("example.com"));
     }
+    @Test
+    public void testIsStrongPassword() {
+        Assert.assertEquals(false, RegularExpressions.isStrongPassword("Cool_pass"));
+        Assert.assertEquals(false, RegularExpressions.isStrongPassword(" Cool_pass"));
+        Assert.assertEquals(false, RegularExpressions.isStrongPassword("C00l"));
+        Assert.assertEquals(false, RegularExpressions.isStrongPassword("CAVCSGASFS"));
+        Assert.assertEquals(false, RegularExpressions.isStrongPassword("1234156151251"));
+        Assert.assertEquals(false, RegularExpressions.isStrongPassword("fsafas1_:_412455"));
+        Assert.assertEquals(true, RegularExpressions.isStrongPassword("C00l_Pass"));
+        Assert.assertEquals(true, RegularExpressions.isStrongPassword("SupperPas1"));
+        Assert.assertEquals(true, RegularExpressions.isStrongPassword("abRa_Kada6Ra"));
+        Assert.assertEquals(true, RegularExpressions.isStrongPassword("AAAAAAA____11111___bbbbbb"));
+        Assert.assertEquals(true, RegularExpressions.isStrongPassword("paSSwo1d"));
+        Assert.assertEquals(true, RegularExpressions.isStrongPassword("5aSSwo14"));
+    }
 }

@@ -58,7 +58,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegularExpressionsTest.testIsURL">
+  <component name="RunManager" selected="JUnit.RegularExpressionsTest">
+    <configuration name="RegularExpressionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RegularJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegularExpressionsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegularExpressionsTest.isIP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RegularJava" />
       <option name="PACKAGE_NAME" value="" />
@@ -91,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegularExpressionsTest" />
         <item itemvalue="JUnit.RegularExpressionsTest.testIsURL" />
         <item itemvalue="JUnit.RegularExpressionsTest.testIsGUID" />
         <item itemvalue="JUnit.RegularExpressionsTest.isIP" />
